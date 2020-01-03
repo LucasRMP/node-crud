@@ -2,7 +2,10 @@
   "name": "node-crud",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/LucasRMP/node-crud.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasRMP/node-crud.git"
+  },
   "author": "Lucas Pessone <lucas.rmagalhaes@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -10,7 +13,7 @@
     "start": "node src/index.js"
   },
   "dependencies": {
-    "dotenv": "^8.2.0",
+    "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
     "mongoose": "^5.8.4",
     "morgan": "^1.9.1",
@@ -18,6 +21,13 @@
   },
   "devDependencies": {
     "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
     "nodemon": "^2.0.2"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/LucasRMP/node-crud/issues"
+  },
+  "homepage": "https://github.com/LucasRMP/node-crud#readme",
+  "keywords": [],
+  "description": ""
 }
