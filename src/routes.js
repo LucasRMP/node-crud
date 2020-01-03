@@ -1,7 +1,19 @@
-const Router = require('express').Router();
+const router = require('express').Router();
 
-Router.get('/', (req, res) => {
-  return res.json({ Hello: "World"})
+const userController = require('./controllers/UserController');
+
+router.get('/', (req, res) => {
+  return res.json({ Hello: "World" });
 })
 
-module.exports = Router;
+// USER
+router.post('/users', userController.store);
+router.get('/users', userController.index);
+router.delete('/users/:id', userController.delete);
+router.get('/users/:id', userController.find);
+router.patch('/users', userController.update);
+
+// CLEAR MODELS
+router.delete('/clear/users', userController.clear);
+
+module.exports = router;
